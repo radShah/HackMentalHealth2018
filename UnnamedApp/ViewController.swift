@@ -29,7 +29,14 @@ class ViewController: UIViewController {
     
     func addRestraintsToQuestionLabel() {
         questionLabel.backgroundColor = UIColor.gray
-        questionLabel.font =  UIFont(name: "HelveticaNeue", size: 20)
+        questionLabel.font =  UIFont(name: "Nunito-Regular", size: 20)
+        
+        
+        UIFont.familyNames.forEach({ familyName in
+            let fontNames = UIFont.fontNames(forFamilyName: familyName)
+            print(familyName, fontNames)
+        })
+        
         questionLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(questionLabel)
         let horizontalConstraint = NSLayoutConstraint(item: questionLabel, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
