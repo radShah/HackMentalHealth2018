@@ -15,13 +15,13 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         
         let answerButton1 = UIButton()
-        addRestraintsToButton(answerButton: answerButton1, verticalConstraint: 100)
+        addRestraintsToButton(answerButton: answerButton1, verticalConstraint: 125)
 
         let answerButton2 = UIButton()
-        addRestraintsToButton(answerButton: answerButton2, verticalConstraint: 175)
+        addRestraintsToButton(answerButton: answerButton2, verticalConstraint: 200)
         
         let answerButton3 = UIButton()
-        addRestraintsToButton(answerButton: answerButton3, verticalConstraint: 250)
+        addRestraintsToButton(answerButton: answerButton3, verticalConstraint: 275)
 
     }
     
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         view.addSubview(answerButton)
         
         let leadingMarginContraints = NSLayoutConstraint(item: answerButton, attribute:.leadingMargin, relatedBy: .equal, toItem: view, attribute: .leadingMargin, multiplier: 1.0, constant: 0)
-        let trailingMarginContraints = NSLayoutConstraint(item: answerButton, attribute:.trailingMargin, relatedBy: .equal, toItem: view, attribute: .trailingMargin, multiplier: 1.0, constant: 40)
+        let trailingMarginContraints = NSLayoutConstraint(item: answerButton, attribute:.trailingMargin, relatedBy: .equal, toItem: view, attribute: .trailingMargin, multiplier: 1.0, constant: 0)
         let verticalConstraint = NSLayoutConstraint(item: answerButton, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: CGFloat(verticalConstraint))
         let heightConstraint = NSLayoutConstraint(item: answerButton, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 50)
         view.addConstraints([leadingMarginContraints, trailingMarginContraints, verticalConstraint, heightConstraint])
